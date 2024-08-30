@@ -9,4 +9,5 @@
   <a href="https://huggingface.co"><img width=300 src="assets/hf_model.png"></a>
 </p>
 
-> Note: This project is in active development and is not yet ready for general use.
+> [!NOTE]
+> This project is in active development and is not yet ready for general use.
