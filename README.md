@@ -1,3 +1,3 @@
 <p align="center">
-  <img src="assets/mlxai.png" width="929"/>
+  <img src="assets/mlxai.png" width="500"/>
 </p>
