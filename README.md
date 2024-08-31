@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://gemini.google.com"><img width=200 src="assets/gemini_model.png"></a>
-  <a href="https://huggingface.co"><img width=300 src="assets/hf_model.png"></a>
+  <a href="https://huggingface.co/models"><img width=300 src="assets/hf_model.png"></a>
 </p>
 
 > [!NOTE]
