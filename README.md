@@ -1,6 +1,11 @@
 <p align="center">
-  <img src="assets/mlxai.png" width="600"/>
+  <img src="assets/mlxai.png" width="800"/>
 </p>
+
+<p align="center">
+<a href="https://github.com/molexai/mlxai" target="_blank">
+    <img src="https://img.shields.io/github/last-commit/molexai/mlxai" alt="Last Commit">
+</a>
 
 <h2 align="center">Featured Models</h2>
 

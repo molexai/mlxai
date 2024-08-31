@@ -1,5 +1,6 @@
 use reqwest::Client;
 use serde_json::Value;
+use regex::Regex;
 
 pub(crate) async fn request(key: &str, model: &str, text: &str) -> Result<(), Box<dyn std::error::Error>> {
     let client = Client::new();
@@ -21,7 +22,8 @@ pub(crate) async fn request(key: &str, model: &str, text: &str) -> Result<(), Bo
 
     let response_json: Value = serde_json::from_str(&response_text)?;
     if let Some(text) = response_json["candidates"][0]["content"]["parts"][0]["text"].as_str() {
-        println!("{}", text.replace("**", "").replace("*", "").replace("`", "").replace("```", ""));
+        let re = Regex::new(r"(\*\*|\*|```|`)").unwrap();
+        println!("{}", re.replace_all(&text, ""));
     } else {
         println!("molexAI Error: No response text found.");
     }
