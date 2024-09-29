@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/mlxai.png" width="700"/>
+  <img src="assets/mlxai.png" width="600"/>
 </p>
 
 <p align="center">
