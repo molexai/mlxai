@@ -1,4 +1,5 @@
 mod gemini;
+mod azure;
 
 use structopt::StructOpt;
 
@@ -6,7 +7,7 @@ use structopt::StructOpt;
 #[structopt(name = "mlxai")]
 struct Opt {
     model: String,
-    api_key: String,
+    key: String,
     text: String,
 }
 
@@ -14,11 +15,13 @@ struct Opt {
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let opt = Opt::from_args();
     let model = &opt.model;
-    let api_key = &opt.api_key;
+    let api_key = &opt.key;
     let text = &opt.text;
 
     if model.starts_with("gemini") {
         gemini::request(api_key, model, text).await?;
+    } else {
+        azure::request(model, api_key, text).await?;
     }
     Ok(())
 }

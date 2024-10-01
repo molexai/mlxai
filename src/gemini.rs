@@ -8,7 +8,7 @@ pub(crate) async fn request(key: &str, model: &str, text: &str) -> Result<(), Bo
 
     let request_body = serde_json::json!({
         "contents": [{
-            "parts": [{"text": text}]
+            "parts": [{"text": "Respond with only the response no additional comments. {}".replace("{}", text)}]
         }]
     });
 
